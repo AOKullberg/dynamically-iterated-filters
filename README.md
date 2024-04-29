@@ -25,13 +25,13 @@ jupyter lab
 ## Reproducing the results
 The notebooks should be self-explanatory for reproducing the results of the paper.
 #### Tracking
-Data of the MC runs are provided in `data/tracking`.
+The results data used to produce the plots in the data can be provided upon request, otherwise the MC trials need to be re-run.
 To re-run the MC trials, `run.py` with configuration is provided.
 It can be run via Hydra multirun (in the venv) by
 ```
 python run.py sim=trackingexample -m
 ```
-This will produce a multirun directory with similar data to that in `data/tracking`.
+This will produce a multirun directory with data that should be similar to the results in the paper (note random trajectories).
 The plots can then be reproduced using the `tracking-example-results.ipynb` notebook.
 #### TDOA
 The TDOA example is self-contained and can be reproduced following the `tdoa-example.ipynb` notebook.
