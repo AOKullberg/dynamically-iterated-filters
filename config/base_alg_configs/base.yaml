@@ -1,0 +1,8 @@
+_partial_: true
+transition_function: ${sim.transition_function}
+observation_function: ${sim.observation_function}
+transition_covariances: ${sim.transition_covariance}
+observation_covariances: ${sim.observation_covariance}
+propagate_first: ${sim.propagate_first}
+initial_state: ${sim.initial_state}
+theta0: ${sim.theta0}

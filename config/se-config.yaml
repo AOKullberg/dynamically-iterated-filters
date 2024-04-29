@@ -1,0 +1,17 @@
+defaults:
+  - sim: ???
+  - alg: ekf
+  - _self_
+  - override hydra/launcher: joblib
+
+hydra:
+  launcher:
+    n_jobs: 2
+  job:
+    chdir: True
+  sweeper:
+    params:
+      sim: trackingexample
+      alg: choice(ekf, ckf, ukf, diekf, dickf, diukf, diplf)
+      sim.q1: choice(1e-4, 1e-3, 1e-2, 1e-1, 1)
+      sim.s2: choice(1e-2, 1e-1, 1, 10, 100)

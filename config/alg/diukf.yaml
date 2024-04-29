@@ -1,0 +1,8 @@
+defaults:
+  - /base_alg_configs/base_se@_here_
+
+_target_: ssmjax.algs.diukf
+linearization_params:
+  _target_: ssmjax.types.LinearizationParameters
+  transition_parameters: ${sim.unscented_parameters}
+iterations: ${sim.dynamic_filter_iterations}

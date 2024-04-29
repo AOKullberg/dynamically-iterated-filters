@@ -1,0 +1,5 @@
+defaults:
+  - /base_alg_configs/base_se@_here_
+
+_target_: ssmjax.algs.dickf
+iterations: ${sim.dynamic_filter_iterations}
